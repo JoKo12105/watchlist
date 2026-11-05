@@ -1,0 +1,18 @@
+/* Ergänzungen für die Handy-Ansicht (baut auf app.css der Erweiterung auf) */
+body{-webkit-tap-highlight-color:transparent}
+.wrap{padding-block:max(18px, env(safe-area-inset-top, 0px)) calc(48px + env(safe-area-inset-bottom, 0px));gap:16px}
+.head h1{font-size:clamp(24px,7vw,40px)}
+.stand{margin:6px 0 0;font:500 12px/1.4 var(--mono);color:var(--muted)}
+.stand.old{color:var(--warn)}
+.board{gap:12px;padding:14px}
+.seg{display:flex}
+.seg button{flex:1;padding:9px 8px}
+/* Dienste: auf dem Handy als waagrecht wischbare Zeile */
+.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-14px;padding-inline:14px;padding-bottom:2px;scroll-snap-type:x proximity}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;scroll-snap-align:start;padding:8px 12px}
+.tools{gap:8px}
+.tools input[type=search]{flex:1 1 160px;padding:9px 10px;font-size:16px}
+.tools select{padding:9px 8px;font-size:15px;max-width:100%}
+.meta a{padding-block:4px}
+@media (min-width:760px){.chips{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}}
